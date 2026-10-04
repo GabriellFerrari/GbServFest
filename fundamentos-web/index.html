@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServGui - Loja de Bebidas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="icons8-cerveja-16.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <h1>Gb ServFest</h1>
+    <p>Brejas geladas, a hora que quiser.</p>
+  </header>
+
+  <main class="principal">
+    <section class="cartao">
+      <h2 id="titulo-formulario">Cadastrar produto</h2>
+
+      <form id="form-produto" novalidate>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Ex.: Cerveja Pilsen 600 ml" autocomplete="off">
+
+        <div class="linha">
+          <div>
+            <label for="preco">Preço (R$)</label>
+            <input type="number" id="preco" step="0.01" min="0" placeholder="12.50">
+          </div>
+          <div>
+            <label for="quantidade">Quantidade</label>
+            <input type="number" id="quantidade" step="1" min="0" placeholder="30">
+          </div>
+        </div>
+
+        <p id="mensagem" class="mensagem" role="alert" aria-live="polite"></p>
+
+        <div class="acoes-form">
+          <button type="submit" id="botao-form" class="btn btn-principal">Adicionar produto</button>
+          <button type="button" id="botao-cancelar" class="btn btn-neutro" hidden>Cancelar edição</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <div class="topo-lista">
+        <h2>Produtos</h2>
+        <p id="contador">Produtos cadastrados: 0</p>
+      </div>
+
+      <p id="lista-vazia" class="vazio">Nenhum produto cadastrado.</p>
+      <ul id="lista-produtos"></ul>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Gb ServFest &copy; 2026 &mdash; Trabalho Faculdade Gabriel Ferrari Assumpção</p>
+    <p>Feito com HTML, CSS e JavaScript puro e meu grande amigo Cloude. Beba com moderaçãoe.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
